@@ -2,11 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-//function MiBoton2(props){
-function MiBoton2({contador, handlerClick}){
+function MiBoton2(props){
+//function MiBoton2({contador, handlerClick}){
   return(
-    //<button type='button' onClick={props.handlerClick}>Se hicieron {props.contador} clicks</button>
-    <button type='button' onClick={handlerClick}>Se hicieron {contador} clicks</button>
+    <button type='button' className='miBoton2' onClick={props.handlerClick}>Se hicieron {props.contador} clicks</button>
+    //<button type='button' className='miBoton2' onClick={handlerClick}>Se hicieron {contador} clicks</button>
   );
 }
 
@@ -19,6 +19,18 @@ function MiBoton(){
 
   return(
     <button type='button' onClick={handlerClick}>Se hicieron {contador} clicks</button>
+  );
+}
+
+function MiForm(){
+  return(
+    <form>
+      <label>Producto</label>
+      <input type='text' className='miProducto' placeholder='Nombre del producto'></input><br/>
+      <label>EsFruta</label>
+      <input type='checkbox' className='miTipoProducto'></input><br/>
+      <button type='button' >Guardar</button>
+    </form>
   );
 }
 
@@ -37,6 +49,8 @@ function App() {
       <h1>Estado compartido</h1>
       <MiBoton2 contador={contador} handlerClick={handlerClick}/>
       <MiBoton2 contador={contador} handlerClick={handlerClick}/>
+      <h1>Form</h1>
+      <MiForm/>
     </>
   );
 }
