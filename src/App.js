@@ -40,6 +40,14 @@ function GuardarProducto(){
   );
 }
 
+function Lista(){
+  return(
+    <ul>
+      
+    </ul>
+  );
+}
+
 function App() {
   const [contador,setContador] = useState(0);
 
