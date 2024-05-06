@@ -26,11 +26,17 @@ function MiForm(){
   return(
     <form>
       <label>Producto</label>
-      <input type='text' className='miProducto' placeholder='Nombre del producto'></input><br/>
+      <input type='text' id='producto' placeholder='Nombre del producto'></input><br/>
       <label>EsFruta</label>
-      <input type='checkbox' className='miTipoProducto'></input><br/>
-      <button type='button' >Guardar</button>
+      <input type='checkbox' id='tipoProducto'></input><br/>
+      <GuardarProducto/>
     </form>
+  );
+}
+
+function GuardarProducto(){
+  return(
+    <button type='button'>Guardar</button>
   );
 }
 
